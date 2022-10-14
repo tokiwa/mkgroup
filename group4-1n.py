@@ -27,7 +27,7 @@ keyword = [
 ]
 
 len_u = len(keyword)
-len_k = len(keyword[0])  # 3
+# len_k = len(keyword[0])  # 3
 len_g = len(groupKeyword)
 
 sim = []
@@ -70,14 +70,14 @@ while True:
     print(nps_copy)
     for i in range(len_g):
         u, s = np.unravel_index(np.argmax(nps_copy), nps_copy.shape)
-        # print(u,s)
+        print("max similarity:",nps_copy[u,s],"[" + str(u) + "," + str(s) + "] Order:", count+1)
         gkey[s].append(u)
         print(gkey)
         nps_copy[u] = -1  # similarityが最大であったユーザ行を対象外(-1)にする。
         nps[u] = -1  # similarityが最大であったユーザ行を対象外(-1)にする。
         nps_copy[:, s] = -1  # 教員のKeyword列を対象外(-1)にする。
         count += 1
-        print(count)
+#        print(count)
         print(nps_copy)
         if count == len_u:
             flag = True
