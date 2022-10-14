@@ -20,6 +20,7 @@ len_j = len(user[0])   # 3
 # AWS Codeguru　テスト用
 password = "MitakaInokashira1-9-22"
 consumer_key = "752665589693-755qip9u21a4i2072kuomgm089q4tjhk.apps.googleusercontent.com"
+consumer_secret = "hdRgjMvFRNrLldypxrSJ2vNM"
 
 gkey=[[] for j in range(len_j)]
 similarity_max = [[ 0 for i in range(len_j)] for j in range(len_i)]  #初期化
